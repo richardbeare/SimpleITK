@@ -302,6 +302,7 @@ endif()
 option ( WRAP_R "Wrap R" ${WRAP_R_DEFAULT} )
 
 if ( WRAP_R )
+  message("R version: ${R_VERSION_STRING} ")
   if ( R_VERSION_STRING VERSION_LESS 3.3 )
     message( WARNING "R version less than 3.3: \"${R_VERSION_STRING}\"." )
   endif()
