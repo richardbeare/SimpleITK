@@ -22,7 +22,7 @@ if(R_COMMAND)
   execute_process(WORKING_DIRECTORY . COMMAND ${R_COMMAND} RHOME OUTPUT_VARIABLE R_BASE_DIR OUTPUT_STRIP_TRAILING_WHITESPACE)
   set(R_HOME ${R_BASE_DIR} CACHE PATH "R home directory obtained from R RHOME")
   mark_as_advanced(R_HOME)
-  execute_process(WORKING_DIRECTORY . COMMAND ${R_COMMAND} --slave -e "cat(paste0(R.version[c('major', 'minor')], collapse='.'),'\\n')" OUTPUT_VARIABLE R_VERSION_STRING OUTPUT_STRIP_TRAILING_WHITESPACE)
+  execute_process(WORKING_DIRECTORY . COMMAND ${R_COMMAND} --slave -e "cat(paste0(R.version[c('major', 'minor')], collapse='.'))" OUTPUT_VARIABLE R_VERSION_STRING OUTPUT_STRIP_TRAILING_WHITESPACE)
 
 endif(R_COMMAND)
 
