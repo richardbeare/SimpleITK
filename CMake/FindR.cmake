@@ -9,7 +9,7 @@
 # R_LIBRARY_BASE     -
 # R_COMMAND          - Path to R command
 # RSCRIPT_EXECUTABLE - Path to Rscript command
-#
+# R_VERSION_STRING   - R version obtained from R_COMMAND and R.version variable
 
 
 # Make sure find package macros are included
