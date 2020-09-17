@@ -565,8 +565,9 @@ class Doxy2R(Doxy2SWIG):
                 self.parse(n)
 
     def do_includes(self, node):
-        self.add_text('%C++ includes: ')
-        self.generic_parse(node, pad=1)
+        # we don't want the c++ include
+        # information - doesn't belong with the R code
+        pass
 
     def do_detaileddescription(self, node):
         if self.FilterTitle:
@@ -719,8 +720,9 @@ class Doxy2RProc(Doxy2SWIG):
 
 
     def do_includes(self, node):
-        self.add_text('%C++ includes: ')
-        self.generic_parse(node, pad=1)
+        # we don't want the c++ include
+        # information - doesn't belong with the R code
+        pass
 
     def do_detaileddescription(self, node):
         if self.FilterTitle:
